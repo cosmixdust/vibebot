@@ -2,9 +2,13 @@ import aiosqlite
 import asyncio
 import discord
 import pytz
+import random
+
 from datetime import datetime
 from discord import app_commands
 from discord.ext import commands, tasks
+
+from phrases import monday, wednesday, thursday
 
 intents = discord.Intents(
     message_content= True,
@@ -34,19 +38,19 @@ async def timeCheck():
             now_utc.weekday() == 0,
             now_utc.hour == 12,
             now_utc.minute == 0)):
-        await send_message_to_channels("Hello everyone! It is Group-hug Monday today! I hope you're doing amazing and let's all have a great week!")
+        await send_message_to_channels(random.choice(monday))
 
     elif all((
             now_utc.weekday() == 2,
             now_utc.hour == 12,
             now_utc.minute == 0)):
-        await send_message_to_channels("It is VVibe-Check VVednesday! Are y'all vibing today? I am!")
+        await send_message_to_channels(random.choice(wednesday))
 
     elif all((
             now_utc.weekday() == 3,
             now_utc.hour == 12,
             now_utc.minute == 0)):
-        await send_message_to_channels("Thirsty Thursday! What are you drinking at this time? Let us know!")
+        await send_message_to_channels(random.choice(thursday))
 
 @bot.event
 async def on_ready():

@@ -13,7 +13,7 @@ wednesday = [
     ]
     
 thursday = [
-    "Thirsty Thursday! What are you drinking at this time? Let us know!"
+    "Thirsty Thursday! What are you drinking at this time? Let us know!",
     "I would love a glass of water... Because it's Thirsty Thursday! What are you drinking today?",
     "Thirsty Thursday! Drinkin' time! Thirsty Thursday! Drinkin' time! Thirsty Thursday! Drinkin' time!",
     ]

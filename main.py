@@ -9,7 +9,9 @@ from discord.ext import commands, tasks
 intents = discord.Intents(
     message_content= True,
     messages= True,
-    guilds= True
+    guilds= True,
+    reactions = True,
+    members = True
 )
 
 bot = commands.Bot(command_prefix='-', intents=intents)
